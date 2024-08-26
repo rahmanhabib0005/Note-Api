@@ -37,7 +37,8 @@ class ChatController extends Controller
 
         return response()->json([
             'status' => 200,
-            'message' => $res
+            'message' => $res,
+            'user' => $request->user()
         ]);
     }
 }
