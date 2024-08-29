@@ -13,7 +13,12 @@ class ChatroomController extends Controller
      */
     public function index()
     {
-        //
+        $rooms = Chatroom::all();
+
+        return response()->json([
+            'status' => 200,
+            'rooms' => $rooms
+        ]);
     }
 
     /**

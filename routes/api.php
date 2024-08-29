@@ -37,5 +37,6 @@ Route::group(['middleware' => 'auth:api', 'prefix' => 'v1'], function(){
     Route::get('chats/{chatroom}',[ChatController::class, 'getChat']);
     Route::post('chats/store',[ChatController::class, 'store']);
     
+    Route::get('chatroom',[ChatroomController::class, 'index']);
     Route::post('chatroom/store',[ChatroomController::class, 'store']);
 });
